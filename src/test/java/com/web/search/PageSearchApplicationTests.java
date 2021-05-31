@@ -26,4 +26,13 @@ class PageSearchApplicationTests {
 		
 	}
 
+	
+	@Test
+	void getPageDatanegative() {
+		SearchService ss = new SearchService();
+		List<PageData> pagedatalist = ss.searchresource("gaggg");
+		
+		assertThat(pagedatalist.size()).isEqualTo(0);
+		
+	}
 }
